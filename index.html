@@ -31,7 +31,6 @@
     overflow-x: hidden;
   }
 
-  /* ── HEADER ── */
   header {
     background: var(--green);
     padding: 0 40px;
@@ -85,7 +84,6 @@
     line-height: 1.6;
   }
 
-  /* ── HERO ── */
   .hero {
     background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 60%, var(--green-light) 100%);
     padding: 60px 40px 80px;
@@ -122,7 +120,6 @@
     position: relative;
   }
 
-  /* ── MAIN LAYOUT ── */
   main {
     max-width: 960px;
     margin: -40px auto 60px;
@@ -172,7 +169,6 @@
     flex-shrink: 0;
   }
 
-  /* ── FORM SECTIONS ── */
   .form-body { padding: 36px; }
 
   .section-label {
@@ -194,7 +190,6 @@
     background: var(--cream-dark);
   }
 
-  /* ── PATIENT INFO ── */
   .fields-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -234,39 +229,6 @@
 
   .field.full { grid-column: 1 / -1; }
 
-  /* ── SERVICE CHIPS ── */
-  .service-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 32px;
-  }
-
-  .service-chip {
-    border: 1.5px solid #ddd5c3;
-    border-radius: 10px;
-    padding: 14px 12px;
-    cursor: pointer;
-    transition: all .2s;
-    text-align: center;
-    background: var(--cream);
-    position: relative;
-  }
-
-  .service-chip:hover { border-color: var(--green-light); background: var(--white); }
-
-  .service-chip.active {
-    border-color: var(--green);
-    background: var(--green);
-    color: var(--white);
-  }
-
-  .service-chip .s-icon { font-size: 1.4rem; display: block; margin-bottom: 6px; }
-  .service-chip .s-name { font-size: .78rem; font-weight: 500; line-height: 1.3; }
-
-  .service-chip input[type=radio] { display: none; }
-
-  /* ── CALENDAR ── */
   .calendar-wrap { margin-bottom: 32px; }
 
   .cal-nav {
@@ -288,7 +250,11 @@
     display: flex; align-items: center; justify-content: center;
   }
 
-  .cal-nav button:hover { background: var(--green); color: var(--white); border-color: var(--green); }
+  .cal-nav button:hover {
+    background: var(--green);
+    color: var(--white);
+    border-color: var(--green);
+  }
 
   .cal-month {
     font-family: 'Cormorant Garamond', serif;
@@ -355,7 +321,6 @@
 
   .cal-day.selected::after { background: var(--gold); }
 
-  /* ── TIME SLOTS ── */
   .slots-wrap { margin-bottom: 32px; }
 
   .slots-placeholder {
@@ -405,7 +370,6 @@
     text-decoration: line-through;
   }
 
-  /* ── SUMMARY BOX ── */
   .summary-box {
     background: var(--cream);
     border: 1.5px solid #ddd5c3;
@@ -439,7 +403,6 @@
   .summary-row:last-child { border: none; }
   .summary-row strong { color: var(--text); font-weight: 500; }
 
-  /* ── SUBMIT ── */
   .submit-btn {
     width: 100%;
     padding: 16px;
@@ -459,11 +422,20 @@
     gap: 10px;
   }
 
-  .submit-btn:hover { background: var(--green-mid); transform: translateY(-1px); box-shadow: 0 6px 24px rgba(26,61,46,.3); }
-  .submit-btn:active { transform: none; }
-  .submit-btn:disabled { background: #b0bfb8; cursor: not-allowed; transform: none; box-shadow: none; }
+  .submit-btn:hover {
+    background: var(--green-mid);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px rgba(26,61,46,.3);
+  }
 
-  /* ── SUCCESS STATE ── */
+  .submit-btn:active { transform: none; }
+  .submit-btn:disabled {
+    background: #b0bfb8;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
   .success-overlay {
     display: none;
     flex-direction: column;
@@ -492,7 +464,15 @@
     to   { transform: scale(1); opacity:1; }
   }
 
-  .success-check svg { width: 36px; height: 36px; stroke: white; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .success-check svg {
+    width: 36px;
+    height: 36px;
+    stroke: white;
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
 
   .success-overlay h3 {
     font-family: 'Cormorant Garamond', serif;
@@ -522,7 +502,6 @@
     gap: 8px;
   }
 
-  /* ── FOOTER ── */
   footer {
     text-align: center;
     padding: 24px;
@@ -530,8 +509,6 @@
     color: var(--muted);
   }
 
-
-  /* ── WHATSAPP / MOBILE FIRST TWEAKS ── */
   @media (max-width: 640px) {
     header {
       height: 64px !important;
@@ -610,13 +587,11 @@
     }
   }
 
-  /* ── RESPONSIVE ── */
   @media (max-width: 640px) {
     header { padding: 0 20px; }
     .hero { padding: 40px 20px 60px; }
     .form-body { padding: 24px 20px; }
     .fields-grid { grid-template-columns: 1fr; }
-    .service-grid { grid-template-columns: 1fr 1fr; }
     .slots-grid { grid-template-columns: repeat(3, 1fr); }
     .card-header { padding: 20px; }
   }
@@ -624,7 +599,6 @@
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="logo">
     <div class="logo-icon">
@@ -641,17 +615,14 @@
   </div>
 </header>
 
-<!-- HERO -->
 <div class="hero">
   <h1>Prenota il tuo <span>appuntamento</span></h1>
   <p>Scegli il servizio, il giorno e l'orario che preferisci. Riceverai conferma nel più breve tempo possibile.</p>
 </div>
 
-<!-- MAIN -->
 <main>
   <div class="booking-card">
 
-    <!-- FORM BODY -->
     <div id="formBody">
       <div class="card-header">
         <div class="step-badge">📋</div>
@@ -660,40 +631,36 @@
 
       <div class="form-body">
 
-
         <div style="margin-bottom:16px;text-align:right;">
           <a href="#calendarSection" style="display:inline-block;background:#1a3d2e;color:#fff;text-decoration:none;padding:8px 12px;border-radius:8px;font-size:.78rem;font-weight:500;">
             Vai subito al calendario
           </a>
         </div>
 
-        <!-- 1. DATI PAZIENTE -->
-
         <div class="section-label">Dati Paziente</div>
         <div class="fields-grid">
           <div class="field">
-            <label>Nome *</label>
-            <input type="text" id="nome" name="nome" placeholder="Mario">
+            <label for="nome">Nome *</label>
+            <input type="text" id="nome" name="nome" placeholder="" required>
           </div>
           <div class="field">
-            <label>Cognome *</label>
-            <input type="text" id="cognome" name="cognome" placeholder="Rossi">
+            <label for="cognome">Cognome *</label>
+            <input type="text" id="cognome" name="cognome" placeholder="" required>
           </div>
           <div class="field">
-            <label>Telefono *</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="+39 3xx xxx xxxx">
+            <label for="telefono">Telefono *</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+39 3xx xxx xxxx" required>
           </div>
           <div class="field">
-            <label>Email</label>
-            <input type="email" id="email" name="email" placeholder="mario@email.it">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="email@esempio.it">
           </div>
           <div class="field full">
-            <label>Note / Motivo della visita</label>
+            <label for="note">Note / Motivo della visita</label>
             <input type="text" id="note" name="note" placeholder="es. dolore alla schiena, riabilitazione post-operatoria…">
           </div>
         </div>
 
-        <!-- 3. CALENDARIO -->
         <div class="section-label" id="calendarSection">Scegli la Data</div>
         <div class="calendar-wrap">
           <div class="cal-nav">
@@ -704,7 +671,6 @@
           <div class="cal-grid" id="calGrid"></div>
         </div>
 
-        <!-- 4. ORARI -->
         <div class="section-label">Scegli l'Orario</div>
         <div class="slots-wrap" id="slotsWrap">
           <div class="slots-placeholder" id="slotsPlaceholder">
@@ -713,7 +679,6 @@
           <div class="slots-grid" id="slotsGrid" style="display:none"></div>
         </div>
 
-        <!-- 5. RIEPILOGO -->
         <div class="summary-box" id="summaryBox">
           <h4>📋 Riepilogo Prenotazione</h4>
           <div class="summary-row"><span>Paziente</span><strong id="sNome">—</strong></div>
@@ -721,7 +686,6 @@
           <div class="summary-row"><span>Orario</span><strong id="sOrario">—</strong></div>
         </div>
 
-        <!-- NOTA DISCLAIMER -->
         <div style="background:#fff8ec;border:1.5px solid #e8d5a3;border-radius:10px;padding:14px 18px;margin-bottom:20px;display:flex;gap:10px;align-items:flex-start;">
           <span style="font-size:1.1rem;flex-shrink:0;margin-top:1px;">⚠️</span>
           <p style="font-size:.8rem;color:#7a6030;line-height:1.6;margin:0;">
@@ -729,7 +693,6 @@
           </p>
         </div>
 
-        <!-- SUBMIT -->
         <button class="submit-btn" id="submitBtn" disabled onclick="inviaRichiesta()">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           Invia Richiesta
@@ -738,7 +701,6 @@
       </div>
     </div>
 
-    <!-- SUCCESS STATE -->
     <div class="success-overlay" id="successOverlay">
       <div class="success-check">
         <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
@@ -753,22 +715,17 @@
   </div>
 </main>
 
-<footer>© 2025 GB Fisioterapia Top · Centro di Riabilitazione Anziani e Over 50 · Roma · P.IVA 00000000000</footer>
+<footer>© <span id="currentYear"></span> GB Fisioterapia Top · Centro di Riabilitazione Anziani e Over 50 · Roma · P.IVA 00000000000</footer>
 
 <script>
-  // ── CONFIG EMAILJS ──
-  // Invio via REST API EmailJS, senza script esterni CDN
-  // Inserisci qui i valori del tuo account EmailJS
   const EMAILJS_PUBLIC_KEY = "B7mJMNjnbM-aoaYqS";
   const EMAILJS_SERVICE_ID = "service_ujx0d4k";
   const EMAILJS_TEMPLATE_ID = "template_khaumds";
 
-
-  // Prima data selezionabile: 31 marzo 2026
-  const minSelectableDate = new Date(2026, 2, 31);
+  // Data minima selezionabile: oggi
+  const minSelectableDate = new Date();
   minSelectableDate.setHours(0,0,0,0);
 
-  // ── SLOT AVAILABILITY MAP (giorno settimana -> orari disponibili) ──
   // 0=Dom, 1=Lun, ... 6=Sab
   const slotMap = {
     1: ['18:00','18:30','19:00','19:30','20:00'],
@@ -779,9 +736,9 @@
     6: ['18:00','18:30','19:00','19:30','20:00'],
   };
 
-  // Simulazione slot già presi (random per demo)
   const takenSlots = {};
-  const BOOKING_START_DATE = new Date(2026, 2, 31); // 31 marzo 2026
+
+  const BOOKING_START_DATE = new Date();
   BOOKING_START_DATE.setHours(0,0,0,0);
 
   let currentDate = new Date(BOOKING_START_DATE);
@@ -794,7 +751,6 @@
                       'Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
   const dayNames = ['Dom','Lun','Mar','Mer','Gio','Ven','Sab'];
 
-  // ── CALENDARIO ──
   function renderCalendar() {
     document.getElementById('calMonth').textContent =
       monthNames[viewMonth] + ' ' + viewYear;
@@ -809,7 +765,6 @@
     prevButton.style.opacity = prevButton.disabled ? '0.45' : '1';
     prevButton.style.cursor = prevButton.disabled ? 'not-allowed' : 'pointer';
 
-    // intestazioni giorni
     dayNames.forEach(d => {
       const el = document.createElement('div');
       el.className = 'cal-dow';
@@ -819,9 +774,10 @@
 
     const firstDay = new Date(viewYear, viewMonth, 1).getDay();
     const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
-    const today = new Date(BOOKING_START_DATE);
 
-    // celle vuote
+    const today = new Date();
+    today.setHours(0,0,0,0);
+
     for (let i = 0; i < firstDay; i++) {
       const el = document.createElement('div');
       el.className = 'cal-day empty';
@@ -834,6 +790,8 @@
       el.textContent = d;
 
       const date = new Date(viewYear, viewMonth, d);
+      date.setHours(0,0,0,0);
+
       const dow = date.getDay();
       const isPast = date < today;
 
@@ -846,10 +804,12 @@
         el.addEventListener('click', () => selectDay(d, date));
       }
 
-      if (selectedDay &&
-          d === selectedDay.getDate() &&
-          viewMonth === selectedDay.getMonth() &&
-          viewYear === selectedDay.getFullYear()) {
+      if (
+        selectedDay &&
+        d === selectedDay.getDate() &&
+        viewMonth === selectedDay.getMonth() &&
+        viewYear === selectedDay.getFullYear()
+      ) {
         el.classList.add('selected');
       }
 
@@ -872,7 +832,6 @@
     updateSummary();
   }
 
-  // ── SLOT ORARI ──
   function renderSlots(dow) {
     const grid = document.getElementById('slotsGrid');
     const placeholder = document.getElementById('slotsPlaceholder');
@@ -889,9 +848,11 @@
       const btn = document.createElement('button');
       btn.className = 'slot-btn' + (taken.includes(s) ? ' taken' : '');
       btn.textContent = s;
+
       if (!taken.includes(s)) {
         btn.addEventListener('click', () => selectSlot(s, btn));
       }
+
       grid.appendChild(btn);
     });
   }
@@ -903,7 +864,6 @@
     updateSummary();
   }
 
-  // ── SUMMARY & VALIDATE ──
   function updateSummary() {
     const nome = document.getElementById('nome').value.trim();
     const cognome = document.getElementById('cognome').value.trim();
@@ -915,7 +875,12 @@
 
     if (selectedDay && selectedSlot) {
       box.classList.add('visible');
-      const dateStr = selectedDay.toLocaleDateString('it-IT', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+      const dateStr = selectedDay.toLocaleDateString('it-IT', {
+        weekday:'long',
+        day:'numeric',
+        month:'long',
+        year:'numeric'
+      });
       document.getElementById('sNome').textContent = nome && cognome ? nome + ' ' + cognome : '—';
       document.getElementById('sData').textContent = dateStr;
       document.getElementById('sOrario').textContent = selectedSlot;
@@ -930,7 +895,6 @@
     document.getElementById(id).addEventListener('input', updateSummary);
   });
 
-  // ── NAV MESI ──
   document.getElementById('prevMonth').addEventListener('click', () => {
     const candidateMonth = viewMonth - 1;
     const candidateYear = candidateMonth < 0 ? viewYear - 1 : viewYear;
@@ -948,11 +912,13 @@
 
   document.getElementById('nextMonth').addEventListener('click', () => {
     viewMonth++;
-    if (viewMonth > 11) { viewMonth = 0; viewYear++; }
+    if (viewMonth > 11) {
+      viewMonth = 0;
+      viewYear++;
+    }
     renderCalendar();
   });
 
-  // ── INVIA ──
   async function inviaRichiesta() {
     const nome = document.getElementById('nome').value.trim();
     const cognome = document.getElementById('cognome').value.trim();
@@ -961,20 +927,26 @@
     const note = document.getElementById('note').value.trim();
     const submitBtn = document.getElementById('submitBtn');
 
+    if (!nome || !cognome || !tel || !selectedDay || !selectedSlot) {
+      alert('Compila Nome, Cognome, Telefono e seleziona data e orario.');
+      return;
+    }
+
     if ([EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID].some(v => v.startsWith('INSERISCI_'))) {
       alert('Configura prima EmailJS inserendo Public Key, Service ID e Template ID nel file HTML.');
       return;
     }
 
     const dateStr = selectedDay.toLocaleDateString('it-IT', {
-      weekday:'long', day:'numeric', month:'long', year:'numeric'
+      weekday:'long',
+      day:'numeric',
+      month:'long',
+      year:'numeric'
     });
 
     const templateParams = {
       to_email: 'gianluca.basso@gmail.com',
       subject: `[GB Fisioterapia] Nuova richiesta – ${nome} ${cognome}`,
-
-      // Variabili semplici per il template EmailJS
       nome: nome,
       cognome: cognome,
       telefono: tel,
@@ -982,15 +954,12 @@
       data: dateStr,
       orario: selectedSlot,
       note: note || 'Nessuna nota',
-
-      // Variabili estese mantenute per compatibilità
       patient_name: `${nome} ${cognome}`,
       patient_phone: tel,
       patient_email: email || 'non fornita',
       appointment_date: dateStr,
       appointment_time: selectedSlot,
       notes: note || 'Nessuna nota',
-
       message: `Nuova richiesta di appuntamento da GB Fisioterapia Top
 
 DATI PAZIENTE
@@ -1043,7 +1012,7 @@ ${note || 'Nessuna nota'}`
     }
   }
 
-  // ── INIT ──
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
   renderCalendar();
 </script>
 </body>
